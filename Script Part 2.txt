@@ -1,0 +1,62 @@
+
+
+# DSW-A1, DSW-A2
+
+configure terminal
+ interface range g1/0/1-3
+  switchport mode trunk
+  switchport nonegotiate
+  switchport trunk native vlan 1000
+  switchport trunk allowed vlan 10,20,40,99
+  exit
+ interface port-channel1
+  switchport mode trunk
+  switchport nonegotiate
+  switchport trunk native vlan 1000
+  switchport trunk allowed vlan 10,20,40,99
+  exit
+ exit
+
+
+
+# ASW-A1, ASW-A2, ASW-A3
+
+configure terminal
+ interface range g0/1-2
+  switchport mode trunk
+  switchport nonegotiate
+  switchport trunk native vlan 1000
+  switchport trunk allowed vlan 10,20,40,99
+  exit
+ exit
+
+
+# DSW-B1, DSW-B2
+
+configure terminal
+ interface range g1/0/1-3
+  switchport mode trunk
+  switchport nonegotiate
+  switchport trunk native vlan 1000
+  switchport trunk allowed vlan 10,20,30,99
+  exit
+ interface port-channel1
+  switchport mode trunk
+  switchport nonegotiate
+  switchport trunk native vlan 1000
+  switchport trunk allowed vlan 10,20,30,99
+  exit
+ exit
+
+
+# ASW-B1, ASW-B2, ASW-B3
+
+configure terminal
+ interface range g0/1-2
+  switchport mode trunk
+  switchport nonegotiate
+  switchport trunk native vlan 1000
+  switchport trunk allowed vlan 10,20,30,99
+  exit
+ exit
+
