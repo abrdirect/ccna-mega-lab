@@ -60,3 +60,28 @@ configure terminal
   exit
  exit
 
+
+# ASW-A2, ASW-A3, ASW-B2, ASW-B3
+configure terminal
+ interface f0/1
+  switchport mode access
+  switchport nonegotiate
+  switchport access vlan 10
+  switchport voice vlan 20
+  exit
+ exit
+
+# DSW-A1, DSW-A2, DSW-B1, DSW-B2
+configure terminal
+ interface range g1/0/6-24,g1/1/3-4
+  shutdown
+  exit
+ exit
+
+# ASW-A2, ASW-A3, ASW-B1, ASW-B2, ASW-B3
+configure terminal
+ interface range f0/2-24
+  shutdown
+  exit
+ exit 
+
